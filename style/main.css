@@ -14,15 +14,55 @@ body{
     background-color: #012;
 }
 
-#header,#footer,main,article,section,#contact{
+#header, #footer, main, article, section, #contact{
     display: flex;
     flex-direction: column;
     background-color: rgba(100, 100, 100, .5);
 }
 
-.header{
+.header, nav, section, #contact{
     min-width: 200px;
     width: 100%;
     max-width: 400px;
     margin: auto;
+}
+
+.header h1, .subtitle{
+    margin: .2rem;
+}
+
+#menu{
+    background-color: black;
+    display: block;
+    height: 2rem;
+    width: 100%;
+    max-width: 400px;
+}
+
+.menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;    
+}
+
+.menu a{
+    display: block;
+    color: #ccc;
+    background-color: #222;
+    text-decoration: none;
+    padding: .2rem 40%;
+}
+
+.menu a:hover{
+    background-color: #111;
+}
+
+section{
+    margin: .5rem auto;
+    padding: 1rem;
+}
+
+#contact input{
+    margin: .5rem auto;
+    width: 100%;
 }
