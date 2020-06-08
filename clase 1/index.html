@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maquetado Avanzado</title>
+    <link rel="stylesheet" href="../style/main.css">
 </head>
 
 <body>
@@ -16,7 +17,7 @@
         </div>
         <!-- NAV: se colocan los links mas importantes, ningun enlace que requiera mas de 3 clicks para acceder a el debe estar en el NAV, NO CUENTAN LAS REDES SOCIALES -->
         <nav>
-            <a href="#"></a>
+            <a id="menu" href="#"></a>
             <ul class="menu">
                 <li><a href="" herf="#">link 1</a></li>
                 <li><a href="" herf="#">link 2</a></li>
@@ -32,10 +33,35 @@
             <!-- Section: Contenido contextualizado, depende pura y exclusivamente del entorno/contexto , no funciona fuera de la pagina donde se lo aplica -->
             <section>
                 <header>
-                    <h1>Tema 1</h1>
+                    <h1>Tema 1: Elementos de Medicion</h1>
                 </header>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eveniet iure facere minima! Totam assumenda quos nisi modi facilis dolorum repudiandae, odio numquam expedita exercitationem corrupti minus excepturi itaque deleniti, sit qui praesentium tempore ratione veritatis consequatur unde similique hic laborum culpa? Temporibus fugiat cum corporis eos ipsam facilis necessitatibus mollitia!</p>
+                <p>En HTML5 se incorporaron dos nuevas etiquetas para mostar informacion de manera estadistica.</p>
+                    <p>Estos elementos son:</p>
+                    <p>
+                        <!-- para escribir etiquetas dentro de un parrafo utilizamos &lt y &gt -->
+                    <strong>&lt;progres&gt;</strong>(indica cuanto llevamos realizado de una tarea, mientras que esta aun no este finalizada, se implemeta tanto para barras de carga, como para indicar un avance respecto a cualquier tipo de actividad) 
+                    </p>
+                    <progress></progress>
+                    <progress min="0" max="100" value="20"></progress>
+                    <br>
+                    <p>
+                    <strong>&lt;meter&gt;</strong>(indica los valores correspondientes a una actividad finalizada, como una votacion o la conclusion de un examen. A diferencia de progres se pueden establecer diferentes caracteristicas en base a los valores optimos y bajos)
+                    </p>
+                    <ul>
+                        <h2>Evaluacion</h2>
+                        <li> Nota: 100
+                            <meter min="0" max="100" optimum="90" low="30" high="60" value="100"></meter>
+                        </li>
+                        <li> Nota: 15
+                            <meter min="0" max="100" optimum="90" low="30" high="60" value="15"></meter>
+                        </li>
+                        <li> Nota: 50
+                            <meter min="0" max="100" optimum="90" low="30" high="60" value="50"></meter>
+                        </li>
+                    </ul>
+                <footer>
                 <p><strong>Autor:</strong>Humberto Rivero</p>
+                </footer>
             </section>
             <section>
                 <header>

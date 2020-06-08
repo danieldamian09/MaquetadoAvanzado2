@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;1,200;1,300&display=swap');
+
+
+*{
+    /* Por defecto viene content-box: ancho final (width+padding+border) */
+    /* Border-box: ancho contenido (width-padding-border) */
+    box-sizing: border-box;
+    font-family: 'Raleway', sans-serif;
+}
+
+body{
+    margin: 0;
+    color: #ccc;
+    background-color: #012;
+}
+
+#header,#footer,main,article,section,#contact{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(100, 100, 100, .5);
+}
+
+.header{
+    min-width: 200px;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+}
