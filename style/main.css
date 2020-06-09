@@ -62,7 +62,24 @@ section{
     padding: 1rem;
 }
 
+progress, meter{
+    width: 100%;
+    height: 30px;
+}
+
+iframe, video, svg, canvas{
+    height: 200px;
+    border: 1px solid #ccc;
+    border-radius: .5rem;
+}
+
 #contact input{
     margin: .5rem auto;
     width: 100%;
+}
+
+#contact textarea{
+    height: 6rem;
+    resize: none;
+
 }
