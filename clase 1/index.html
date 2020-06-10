@@ -17,12 +17,12 @@
         </div>
         <!-- NAV: se colocan los links mas importantes, ningun enlace que requiera mas de 3 clicks para acceder a el debe estar en el NAV, NO CUENTAN LAS REDES SOCIALES -->
         <nav>
-            <a id="menu" href="#"></a>
+            <a id="menu" href="#">Menu Principal</a>
             <ul class="menu">
-                <li><a href="" herf="#">link 1</a></li>
-                <li><a href="" herf="#">link 2</a></li>
-                <li><a href="" herf="#">link 3</a></li>
-                <li><a href="" herf="#">GitHub</a></li>
+                <li><a href="#">link 1</a></li>
+                <li><a href="#">link 2</a></li>
+                <li><a href="#"">link 3</a></li>
+                <li><a href="https://github.com/C215714N/EducacionIT/tree/maquetacion-martes-10hs" target="_blank">GitHub</a></li>
             </ul>
         </nav>
     </header>
@@ -41,9 +41,17 @@
                         <!-- para escribir etiquetas dentro de un parrafo utilizamos &lt y &gt -->
                     <strong>&lt;progres&gt;</strong>(indica cuanto llevamos realizado de una tarea, mientras que esta aun no este finalizada, se implemeta tanto para barras de carga, como para indicar un avance respecto a cualquier tipo de actividad) 
                     </p>
-                    <progress></progress>
-                    <progress min="0" max="100" value="20"></progress>
-                    <br>
+                    <ul>
+                        <li>
+                            Avance 20/100
+                            <progress min="0" max="100" value="20"></progress>
+                        </li>
+                        <li>
+                            Avance Indefinido
+                            <progress id="progressBar" min="0" max="100"></progress>
+                            <input type="number" id="miValor" min="0" max="100" onchange="actualizarProgreso()">Ingrese Valor
+                        </li>
+                    </ul>
                     <p>
                     <strong>&lt;meter&gt;</strong>(indica los valores correspondientes a una actividad finalizada, como una votacion o la conclusion de un examen. A diferencia de progres se pueden establecer diferentes caracteristicas en base a los valores optimos y bajos)
                     </p>
@@ -67,26 +75,65 @@
                 <header>
                     <h1>Tema 2: Multimedia</h1>
                 </header>
-                <p>En HTML5 se incorporaron las etiquetas de &lt;audio&gt; & &lt;video&gt;</p>
+                <p>En HTML5 se incorporaron las etiquetas de &lt;audio&gt; & &lt;video&gt;</p><br>
+                <p>&lt;audio&gt; Reproduce formatos .wav, .mp3 & .ogg; asi como tambien las pistas de audio, alojadas en los archivos de video.</p>
                 <audio controls>
                     <source src="../media/californication.ogv">
                     <source src="../media/californication.mp4">
                     <source src="../media/californication.avi">
                 </audio>
-                <video controls>
+                <p>&lt;video&gt; Admite los formatos .avi, .mp4 & .ogv.
+                &lt;source&gt; se utiliza para definir varios origenes de archivos, en caso de incompatibilidad.</p>
+                <video controls id="miVideo">
                     <source src="../media/californication.ogv">
                     <source src="../media/californication.mp4">
                     <source src="../media/californication.avi">
                     disculpe las molestias, pero su navegador no es compactible con el elemento video
                 </video>
+                <button id="reproducir" onclick="Reproducir()">Play</button>
+                <p>&lt;iframe&gt; Utilizado para la insercion de contenido embebido en HTML de manera asincronica, es muy comun para la implementacion de
+                mapas o videos almacenado en otros servidores.</p>
+                <iframe src="https://www.youtube.com/embed/YlUKcNNmywk" frameborder="0"
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                </iframe>
+                <footer>
                 <p><strong>Autor:</strong>Humberto Rivero</p>
+                </footer>
             </section>
             <section>
                 <header>
-                    <h1>Tema 3</h1>
+                    <h1>Tema 3: Elementos Graficos</h1>
                 </header>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique deserunt nemo ipsum nulla repellendus, officiis ea! Rerum mollitia, illo beatae repellat voluptatum dolor totam incidunt temporibus, fuga libero, officia amet explicabo sint est! Veniam omnis debitis voluptatibus dolores aliquam eligendi, fugiat earum quis adipisci ipsa minus repellendus vel sint at!</p>
+                <p>HTML5 ofrece nuevas herramientas para la implementacion de graficos, estas son &lt;svg&gt; &amp; &lt;canvas&gt;; en
+                las que deberemos aplicar lenguajes como XML o JS, para la creacion de los diferentes elementos.</p>
+                <footer>
                 <p><strong>Autor:</strong>Humberto Rivero</p>
+                </footer>
+                <p>
+                    <strong>&lt;svg&gt;</strong>: Scalable Vector Graphics, son imagenes generadas mediante calculos matematicos XML, ideales para graficos que deben
+                    implementarse en multiples tamaños sin que pierdan calidad.
+                </p>
+                <svg>
+                    <rect
+                    x="10" y="10"
+                    width="50" height="50"
+                    fill= "rgb(200, 0, 0)"/>
+                    <rect
+                    x="30" y="30"
+                    width="50" height="50"
+                    fill= "rgba(0, 0, 200, 0.5)"/>
+
+                <circle
+                r="15" cx="80" cy="30"
+                fill= "rgba(0, 200, 0, .5)"/>
+                </svg>
+                <p>
+                    <strong>&lt;canvas&gt;</strong>: Utiliza Bitmap para crear un lienzo JS. No son escalables, pero permite el
+                    desarrollo apicaciones, mediante EventListeners.
+                </p>
+                <canvas id="lienzo">
+                    debe tener habilitado js para poder utilizar canvas
+                </canvas>
             </section>
         </article>
         <article>
@@ -133,8 +180,8 @@
         </div>
         <p class="copy">&copy; Todos los Derechos Reservados | Humberto Rivero &amp; Maquetado Avanzado</p>
     </footer>
-    
 
+<script src="../script/main.js"></script>
 </body>
 
 </html>
